@@ -39,25 +39,3 @@ const server = createServer((req, res) => {
 server.listen(port, () => {
 	console.log(`Server running at port ${port}`);
 });
-
-// MVC .NET, Scala, Java, ...etc
-// Routes file which
-
-/*
-   class UserModel {
-         getUsers() {
-              // preform database request to get all users.
-              reutrn [...users]
-         }
-   }
-
-
-   class UserController {
-        @route("/api/users, "GET");
-        users(req, res) {
-             const users = new UserModel().getUsers();
-             res.send( NewtonJson(users));
-        }
-
-   }
- */
