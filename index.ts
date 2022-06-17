@@ -7,17 +7,20 @@ const server = createServer((req, res) => {
 	if (req.url === "/api/sayhello") {
 		res.statusCode = 200;
 		res.setHeader("Content-type", "text-plain")
+		res.setHeader("Access-Control-Allow-Origin", "*")
 		return res.end("Saying hello")
 	}
 
 	if (req.url === "/api/users") {
 		res.statusCode = 200;
 		res.setHeader('Content-Type', 'application/json');
+		res.setHeader("Access-Control-Allow-Origin", "*")
 		return res.end(JSON.stringify([{name: "John Doe"}]))
 	}
 
 	if (req.url === "/api/send") {
 		res.statusCode = 200;
+		res.setHeader("Access-Control-Allow-Origin", "*")
 		const data = new Promise((resolve, reject) => {
 			let body = ""
 			req.on("data", (chunk) => {
