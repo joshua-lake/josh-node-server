@@ -5,7 +5,7 @@
   "main": "dist/index.js",
 
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "node dist/index.js",
     "start:dev": "./node_modules/nodemon/bin/nodemon.js",
     "tslint": "tslint --project tsconfig.json --config tslint.json",
     "tslint-fix": "tslint --project tsconfig.json --config tslint.json --fix",
